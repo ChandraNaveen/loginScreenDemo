@@ -10,21 +10,37 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
+    @IBOutlet weak var phoneTextFiled: UITextField!
+    
+    @IBOutlet weak var buttonSignUp: UIButton!
 
-        // Do any additional setup after loading the view.
-    }
+    
+  override func viewDidLoad()
+  {
+           super.viewDidLoad()
+           configButton()
+           configTextFields()
+    
+           // Do any additional setup after loading the view.
+  }
+
     
 
-    /*
-    // MARK: - Navigation
+    func configTextFields()
+    {
+        self.userNameTextField.placeholder = "Email"
+        self.passwordTextField.placeholder = "Password"
+        self.repeatPasswordTextField.placeholder = "Repeat password"
+        self.phoneTextFiled.placeholder = "phone"
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+       func configButton()
+       {
+        self.buttonSignUp.layer.cornerRadius = 5
+       
+       }
 }

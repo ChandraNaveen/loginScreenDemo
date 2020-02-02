@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var signInButton: UIButton!
@@ -53,5 +52,22 @@ class LoginViewController: UIViewController {
     {
         self.signInButton.layer.cornerRadius = 5
     }
+    
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        if emailTextField.text!.isEmpty
+        {
+            
+        }
+        else
+        {
+        UserDefaults.standard.set(emailTextField.text, forKey: "email")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.configureRootVc()
+        }
+        
+        
+        
+       }
 }
 

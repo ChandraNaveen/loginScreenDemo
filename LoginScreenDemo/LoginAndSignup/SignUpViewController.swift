@@ -43,4 +43,8 @@ class SignUpViewController: UIViewController {
         self.buttonSignUp.layer.cornerRadius = 5
        
        }
+    //IBActions
+    
 }
+
+//
